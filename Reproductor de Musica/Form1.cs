@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Reproductor_de_Musica
+
 {
     public partial class Form1 : Form
     {
+        bool Play = false;
+        string[] MP3Files;
+        string[] MP3FilesDirectory;
+
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +55,43 @@ namespace Reproductor_de_Musica
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addFileToToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog SearchBox = new OpenFileDialog();
+            SearchBox.Multiselect = true;
+            if(SearchBox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                MP3Files = SearchBox.SafeFileNames;
+                MP3FilesDirectory = SearchBox.FileNames;
+                foreach(var song in MP3Files)
+                {
+                    lstSongs.Items.Add(song);
+                }
+                Player.URL = MP3Files[0];
+                lstSongs.SelectedIndex = 0;
+            }
+        }
+
+        private void lstSongs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Player.URL = MP3FilesDirectory[lstSongs.SelectedIndex];
         }
     }
 }
