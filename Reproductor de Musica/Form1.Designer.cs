@@ -414,6 +414,7 @@
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(180, 30);
             this.toolStripButton8.Text = "Songs";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripSeparator4
             // 
@@ -437,6 +438,7 @@
             this.lstSongs.Name = "lstSongs";
             this.lstSongs.Size = new System.Drawing.Size(569, 381);
             this.lstSongs.TabIndex = 12;
+            this.lstSongs.Visible = false;
             this.lstSongs.SelectedIndexChanged += new System.EventHandler(this.lstSongs_SelectedIndexChanged);
             // 
             // Form1

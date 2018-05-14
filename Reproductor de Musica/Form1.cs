@@ -14,12 +14,14 @@ namespace Reproductor_de_Musica
     public partial class Form1 : Form
     {
         bool Play = false;
-        string[] MP3Files;
-        string[] MP3FilesDirectory;
+        
+        List MP3Files = new List();
+        List MP3FilesDirectory = new List();
 
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -76,22 +78,39 @@ namespace Reproductor_de_Musica
         {
             OpenFileDialog SearchBox = new OpenFileDialog();
             SearchBox.Multiselect = true;
-            if(SearchBox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (SearchBox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                MP3Files = SearchBox.SafeFileNames;
-                MP3FilesDirectory = SearchBox.FileNames;
-                foreach(var song in MP3Files)
+                foreach(var name in SearchBox.SafeFileNames)
                 {
+                    MP3Files.add(name);
+                }
+                foreach (var name in SearchBox.FileNames)
+                {
+                    MP3FilesDirectory.add(name);
+                }
+                lstSongs.Items.Clear();        
+                for(int i = 0; i<MP3Files.getLength(); i++)
+                {
+                    string song = MP3Files.getValue(i);
                     lstSongs.Items.Add(song);
                 }
-                Player.URL = MP3Files[0];
-                lstSongs.SelectedIndex = 0;
+                
+
+               
+
+                //Player.URL = MP3Files[0];
+                //lstSongs.SelectedIndex = 0;
             }
         }
 
         private void lstSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Player.URL = MP3FilesDirectory[lstSongs.SelectedIndex];
+            Player.URL = MP3FilesDirectory.getValue(lstSongs.SelectedIndex);
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            lstSongs.Visible = true;
         }
     }
 }
