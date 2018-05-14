@@ -12,3 +12,17 @@ C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Mu
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe.config
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Interop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.ResolveComReference.cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form1.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Properties.Resources.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
