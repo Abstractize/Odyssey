@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Client",
+      "appliesTo": "Reproductor de Musica/Client.cs",
+      "type": "command"
+    }
+  ]
+}
