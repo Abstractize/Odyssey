@@ -22,34 +22,34 @@ namespace Reproductor_de_Musica
         {
             Thread playerThread = new Thread(new ThreadStart(startGUI));
             Thread clientThread = new Thread(new ThreadStart(connect));
+            playerThread.SetApartmentState(ApartmentState.STA);
             playerThread.Start();
             clientThread.Start();
             
         }
+
         public static void connect()
         {
+            Socket soc = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            System.Net.IPAddress ipAdd = System.Net.IPAddress.Parse(SERVER_IP);
+            System.Net.IPEndPoint remoteEP = new IPEndPoint(ipAdd, PORT_NO);
+            soc.Connect(remoteEP);
             
-            
-                //---data to send to the server---
-                string textToSend = "hola";
+            String message = "hello";
+            Console.WriteLine("Sending : " + message);
+            Console.WriteLine(message.Length);
+            byte[] byData = System.Text.Encoding.ASCII.GetBytes(message);
+            soc.Send(byData);
 
-                //---create a TCPClient object at the IP and port no.---
-                TcpClient client = new TcpClient(SERVER_IP, PORT_NO);
-                NetworkStream nwStream = client.GetStream();
-                byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(textToSend);
+            byte[] buffer = new byte[1024];
+            int iRx = soc.Receive(buffer);
+            char[] chars = new char[iRx];
 
-                //---send the text---
-                Console.WriteLine("Sending : " + textToSend);
-                nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-         
+            System.Text.Decoder d = System.Text.Encoding.UTF8.GetDecoder();
+            int charLen = d.GetChars(buffer, 0, iRx, chars, 0);
+            System.String recv = new System.String(chars);
+            Console.WriteLine("Server responde: " + recv);
 
-                //---read back the text---
-                byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-                int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-                Console.WriteLine("Received : " + Encoding.ASCII.GetString(bytesToRead, 0, bytesRead));
-                Console.ReadLine();
-                client.Close();
-            
         }
 
         public static void startGUI()
