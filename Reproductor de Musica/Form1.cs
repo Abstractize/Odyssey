@@ -28,9 +28,10 @@ namespace Reproductor_de_Musica
         AlbumList Albums = new AlbumList();
         ArtistList Artists = new ArtistList();
 
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
+            userButton.Text = username;
 
         }
 
@@ -313,10 +314,12 @@ namespace Reproductor_de_Musica
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
+            listView2.Items.Clear();
             toolStrip3.Visible = false;
             drawOnAlbumList();
             mode = 1;
             lstSongs.Visible = false;
+            listView1.Visible = false;
             listView2.Visible = true;
             listView2.FullRowSelect = true;
         }
@@ -904,6 +907,24 @@ namespace Reproductor_de_Musica
                 drawOnSongList();
 
             }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Library.Visible = true;
+            Messenger.Visible = false;
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Messenger.Visible = true;
+            Library.Visible = false;
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
