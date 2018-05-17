@@ -21,10 +21,10 @@ namespace Reproductor_de_Musica
         static void Main(string[] args)
         {
             Thread playerThread = new Thread(new ThreadStart(startGUI));
-            Thread clientThread = new Thread(new ThreadStart(connect));
+            //Thread clientThread = new Thread(new ThreadStart(connect));
             playerThread.SetApartmentState(ApartmentState.STA);
             playerThread.Start();
-            clientThread.Start();
+            //clientThread.Start();
             
         }
 
@@ -56,7 +56,7 @@ namespace Reproductor_de_Musica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form3());
         }
 
     }

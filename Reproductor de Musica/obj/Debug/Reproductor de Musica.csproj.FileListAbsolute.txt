@@ -11,18 +11,76 @@ C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Mu
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
 C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe.config
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Interop.WMPLib.dll
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\AxInterop.WMPLib.dll
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.ResolveComReference.cache
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form1.resources
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Properties.Resources.resources
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
-C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\OdysseyMusicPlayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MACTrackBarLib.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.CoverArt.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.DiscId.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form2.resources
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MusicBrainzWebService.dll
+C:\Users\gabab\OneDrive\Documentos\Visual Studio 2017\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MusicBrainzWebService.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Interop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\AxInterop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.ResolveComReference.cache
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form1.resources
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form2.resources
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Properties.Resources.resources
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe.config
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MACTrackBarLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.CoverArt.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.DiscId.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MusicBrainzWebService.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\taglib-sharp.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\MusicBrainzWebService.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Newtonsoft.Json.xml
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.config
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Hqub.Lastfm.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Lpfm.LastFmScrobbler.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\Mono.HttpUtility.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\NAudio.dll
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\bin\Debug\NAudio.xml
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form3.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe.config
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Hqub.Lastfm.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Lpfm.LastFmScrobbler.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MACTrackBarLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.CoverArt.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.DiscId.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Mono.HttpUtility.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MusicBrainzWebService.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\NAudio.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\taglib-sharp.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\MusicBrainzWebService.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\NAudio.xml
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Newtonsoft.Json.xml
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.config
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Interop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\AxInterop.WMPLib.dll
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.ResolveComReference.cache
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form1.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form2.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form3.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Properties.Resources.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
