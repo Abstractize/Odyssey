@@ -107,6 +107,11 @@ namespace Reproductor_de_Musica
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.changeProfilePicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -280,13 +285,16 @@ namespace Reproductor_de_Musica
             this.toolStripSeparator8,
             this.toolStripSeparator3,
             this.toolStripButton4,
+            this.toolStripSeparator7,
             this.toolStripButton5,
-            this.toolStripButton6});
+            this.toolStripSeparator9,
+            this.toolStripButton6,
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1350, 70);
             this.toolStrip1.TabIndex = 5;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = "Username ♫ \\n Name + Last Name";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // leftButton
@@ -369,18 +377,20 @@ namespace Reproductor_de_Musica
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 67);
+            this.toolStripButton4.Size = new System.Drawing.Size(64, 67);
             this.toolStripButton4.Text = "toolStripButton4";
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 67);
+            this.toolStripButton5.Size = new System.Drawing.Size(64, 67);
             this.toolStripButton5.Text = "toolStripButton5";
             // 
             // toolStripButton6
@@ -395,14 +405,11 @@ namespace Reproductor_de_Musica
             // Player
             // 
             this.Player.Enabled = true;
-            this.Player.Location = new System.Drawing.Point(214, 183);
+            this.Player.Location = new System.Drawing.Point(0, 0);
             this.Player.Name = "Player";
             this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
-            this.Player.Size = new System.Drawing.Size(323, 47);
-            this.Player.TabIndex = 6;
-            this.Player.Visible = false;
-            this.Player.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.Player_PlayStateChange);
-            this.Player.Enter += new System.EventHandler(this.Player_Enter);
+            this.Player.Size = new System.Drawing.Size(75, 23);
+            this.Player.TabIndex = 20;
             // 
             // toolStripContainer1
             // 
@@ -642,42 +649,42 @@ namespace Reproductor_de_Musica
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem2.Text = "0";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem3.Text = "1";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem4.Text = "2";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem5.Text = "3";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem6.Text = "4";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem7.Text = "5";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
@@ -822,6 +829,47 @@ namespace Reproductor_de_Musica
             this.listView2.TabIndex = 19;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.Visible = false;
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 70);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 70);
+            // 
+            // changeProfilePicToolStripMenuItem
+            // 
+            this.changeProfilePicToolStripMenuItem.Name = "changeProfilePicToolStripMenuItem";
+            this.changeProfilePicToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.changeProfilePicToolStripMenuItem.Text = "Change Profile Pic";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.AutoSize = false;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeProfilePicToolStripMenuItem,
+            this.logOutToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(200, 67);
+            this.toolStripDropDownButton1.Text = "Username";
+            this.toolStripDropDownButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // Form1
             // 
@@ -1057,6 +1105,11 @@ namespace Reproductor_de_Musica
         private ToolStripMenuItem toolStripMenuItem6;
         private ToolStripMenuItem toolStripMenuItem7;
         private ToolStripMenuItem recomendToolStripMenuItem1;
+        private ToolStripSeparator toolStripSeparator7;
+        private ToolStripSeparator toolStripSeparator9;
+        private ToolStripDropDownButton toolStripDropDownButton1;
+        private ToolStripMenuItem changeProfilePicToolStripMenuItem;
+        private ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
 
