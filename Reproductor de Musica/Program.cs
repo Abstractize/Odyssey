@@ -56,7 +56,9 @@ namespace Reproductor_de_Musica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form3());
+            Form3 loginScreen = new Form3();
+            Application.Run(loginScreen);
+            Application.Run(new Form1(loginScreen.getUsername()));
         }
 
     }

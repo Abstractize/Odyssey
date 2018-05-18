@@ -85,6 +85,8 @@
     <Compile Include="Artist.cs" />
     <Compile Include="ArtistList.cs" />
     <Compile Include="AlbumList.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientActions.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>

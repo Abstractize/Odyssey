@@ -15,6 +15,10 @@ namespace Reproductor_de_Musica
         private String username;
         private String password;
         
+        public String getUsername()
+        {
+            return this.username;
+        }
         public Form3()
         {
             InitializeComponent();
@@ -23,8 +27,7 @@ namespace Reproductor_de_Musica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 player = new Form1(username);
-            player.ShowDialog();
+            
             this.Close();
             
         }

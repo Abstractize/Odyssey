@@ -113,8 +113,6 @@ namespace Reproductor_de_Musica
             this.listView2 = new System.Windows.Forms.ListView();
             this.Library = new System.Windows.Forms.Panel();
             this.Messenger = new System.Windows.Forms.Panel();
-            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
-            this.Chats = new System.Windows.Forms.ToolStrip();
             this.toolStripContainer3 = new System.Windows.Forms.ToolStripContainer();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -124,6 +122,8 @@ namespace Reproductor_de_Musica
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
+            this.Chats = new System.Windows.Forms.ToolStrip();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -135,11 +135,11 @@ namespace Reproductor_de_Musica
             this.toolStripContainer4.SuspendLayout();
             this.Library.SuspendLayout();
             this.Messenger.SuspendLayout();
-            this.toolStripContainer2.ContentPanel.SuspendLayout();
-            this.toolStripContainer2.SuspendLayout();
             this.toolStripContainer3.ContentPanel.SuspendLayout();
             this.toolStripContainer3.SuspendLayout();
             this.toolStrip4.SuspendLayout();
+            this.toolStripContainer2.ContentPanel.SuspendLayout();
+            this.toolStripContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -649,33 +649,33 @@ namespace Reproductor_de_Musica
             this.recomendToolStripMenuItem,
             this.recomendToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // songInfoToolStripMenuItem
             // 
             this.songInfoToolStripMenuItem.Name = "songInfoToolStripMenuItem";
-            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.songInfoToolStripMenuItem.Text = "Song Info";
             this.songInfoToolStripMenuItem.Click += new System.EventHandler(this.songInfoToolStripMenuItem_Click);
             // 
             // playNextToolStripMenuItem
             // 
             this.playNextToolStripMenuItem.Name = "playNextToolStripMenuItem";
-            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playNextToolStripMenuItem.Text = "Play Next";
             // 
             // playLaterToolStripMenuItem
             // 
             this.playLaterToolStripMenuItem.Name = "playLaterToolStripMenuItem";
-            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playLaterToolStripMenuItem.Text = "Play Later";
             this.playLaterToolStripMenuItem.Click += new System.EventHandler(this.playLaterToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // recomendToolStripMenuItem
@@ -688,7 +688,7 @@ namespace Reproductor_de_Musica
             this.toolStripMenuItem6,
             this.toolStripMenuItem7});
             this.recomendToolStripMenuItem.Name = "recomendToolStripMenuItem";
-            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.recomendToolStripMenuItem.Text = "Rate";
             this.recomendToolStripMenuItem.Click += new System.EventHandler(this.recomendToolStripMenuItem_Click);
             // 
@@ -737,7 +737,7 @@ namespace Reproductor_de_Musica
             // recomendToolStripMenuItem1
             // 
             this.recomendToolStripMenuItem1.Name = "recomendToolStripMenuItem1";
-            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.recomendToolStripMenuItem1.Text = "Recomend";
             // 
             // toolStripContainer4
@@ -842,7 +842,8 @@ namespace Reproductor_de_Musica
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.Visible = false;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick_1);
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick_2);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick_1);
             // 
             // columnHeader7
             // 
@@ -900,31 +901,6 @@ namespace Reproductor_de_Musica
             this.Messenger.TabIndex = 20;
             this.Messenger.Visible = false;
             // 
-            // toolStripContainer2
-            // 
-            // 
-            // toolStripContainer2.ContentPanel
-            // 
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.Chats);
-            this.toolStripContainer2.ContentPanel.ForeColor = System.Drawing.Color.Transparent;
-            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(205, 468);
-            this.toolStripContainer2.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer2.Name = "toolStripContainer2";
-            this.toolStripContainer2.Size = new System.Drawing.Size(205, 468);
-            this.toolStripContainer2.TabIndex = 0;
-            this.toolStripContainer2.Text = "toolStripContainer2";
-            // 
-            // Chats
-            // 
-            this.Chats.AutoSize = false;
-            this.Chats.BackColor = System.Drawing.Color.Transparent;
-            this.Chats.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Chats.Location = new System.Drawing.Point(0, 0);
-            this.Chats.Name = "Chats";
-            this.Chats.Size = new System.Drawing.Size(205, 468);
-            this.Chats.TabIndex = 0;
-            this.Chats.Text = "toolStrip4";
-            // 
             // toolStripContainer3
             // 
             // 
@@ -932,7 +908,7 @@ namespace Reproductor_de_Musica
             // 
             this.toolStripContainer3.ContentPanel.Controls.Add(this.toolStrip4);
             this.toolStripContainer3.ContentPanel.Controls.Add(this.textBox1);
-            this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(653, 465);
+            this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(653, 440);
             this.toolStripContainer3.Location = new System.Drawing.Point(211, 3);
             this.toolStripContainer3.Name = "toolStripContainer3";
             this.toolStripContainer3.Size = new System.Drawing.Size(653, 465);
@@ -951,7 +927,7 @@ namespace Reproductor_de_Musica
             this.toolStripButton3,
             this.toolStripButton9,
             this.toolStripButton11});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 416);
+            this.toolStrip4.Location = new System.Drawing.Point(0, 391);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.Size = new System.Drawing.Size(653, 49);
             this.toolStrip4.TabIndex = 0;
@@ -1021,6 +997,31 @@ namespace Reproductor_de_Musica
             this.textBox1.Size = new System.Drawing.Size(653, 422);
             this.textBox1.TabIndex = 1;
             // 
+            // toolStripContainer2
+            // 
+            // 
+            // toolStripContainer2.ContentPanel
+            // 
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.Chats);
+            this.toolStripContainer2.ContentPanel.ForeColor = System.Drawing.Color.Transparent;
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(205, 443);
+            this.toolStripContainer2.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer2.Name = "toolStripContainer2";
+            this.toolStripContainer2.Size = new System.Drawing.Size(205, 468);
+            this.toolStripContainer2.TabIndex = 0;
+            this.toolStripContainer2.Text = "toolStripContainer2";
+            // 
+            // Chats
+            // 
+            this.Chats.AutoSize = false;
+            this.Chats.BackColor = System.Drawing.Color.Transparent;
+            this.Chats.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Chats.Location = new System.Drawing.Point(0, 0);
+            this.Chats.Name = "Chats";
+            this.Chats.Size = new System.Drawing.Size(205, 443);
+            this.Chats.TabIndex = 0;
+            this.Chats.Text = "toolStrip4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1058,15 +1059,15 @@ namespace Reproductor_de_Musica
             this.toolStripContainer4.PerformLayout();
             this.Library.ResumeLayout(false);
             this.Messenger.ResumeLayout(false);
-            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer2.ResumeLayout(false);
-            this.toolStripContainer2.PerformLayout();
             this.toolStripContainer3.ContentPanel.ResumeLayout(false);
             this.toolStripContainer3.ContentPanel.PerformLayout();
             this.toolStripContainer3.ResumeLayout(false);
             this.toolStripContainer3.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
+            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer2.ResumeLayout(false);
+            this.toolStripContainer2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1081,11 +1082,22 @@ namespace Reproductor_de_Musica
         }
         private void lstSongs_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            foreach (ListViewItem lista in lstSongs.SelectedItems)
+            if (e.Button == MouseButtons.Left)
             {
-                Form2 data = new Form2();
+                foreach (ListViewItem lista in lstSongs.SelectedItems)//lstSongs.SelectedItems
+                {
+                    songQueue.empty();
+                    for (int i = lista.Index; i < lstSongs.Items.Count; i++)
+                    {
+
+                        enqueueSong(lstSongs.Items[i]);
+
+                    }
+
+                    playSong();
+                }
             }
-            
+
         }
 
         /*private void lstSongs_SelectedIndexChanged_1(object sender, EventArgs e)

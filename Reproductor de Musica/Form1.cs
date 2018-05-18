@@ -109,15 +109,60 @@ namespace Reproductor_de_Musica
                     Album alb;
                     Song newSong;
                     //Get SongInfo
-                    String name = data.Tag.Title;
-                    String album = data.Tag.Album;
-                    uint year = data.Tag.Year;
+                    String artist;
+                    String name;
+                    String album;
+                    uint year;
                     uint index = data.Tag.Track;
-                    uint Disc = data.Tag.Disc;
+                    uint Disc;
                     String URL = dic;
-                    
+                    //Artist
 #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-                    String artist = data.Tag.Artists[0];
+                    try
+                    {
+                        artist = data.Tag.Artists[0];
+                    }
+                    catch
+                    {
+                        artist = "Uknown Artist";
+
+                    }
+                    //Title
+                    try
+                    {
+                        name = data.Tag.Title;
+                    }
+                    catch
+                    {
+                        name = "Uknown Song";
+                    }
+                    //Album
+                    try
+                    {
+                        album = data.Tag.Album;
+                    }
+                    catch
+                    {
+                        album = "Uknown album";
+                    }
+                    //Year
+                    try
+                    {
+                        year = data.Tag.Year;
+                    }
+                    catch
+                    {
+                        year = 0;
+                    }
+                    //Disc
+                    try
+                    {
+                        Disc = data.Tag.Disc;
+                    }
+                    catch
+                    {
+                        Disc = 1;
+                    }
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
                     //Add to Artist
@@ -125,18 +170,6 @@ namespace Reproductor_de_Musica
                     {
                         art = Artists.searchArtist(artist);
                         
-                    }
-                    else if(artist == "")
-                    {
-                        if (Artists.searchName("Uknown Artist"))
-                        {
-                            art = Artists.searchArtist("Uknown Artist");
-                        }
-                        else
-                        {
-                            add = true;
-                            art = new Artist("Uknown Artist", Properties.Resources.descarga__2_);//Change Image
-                        }
                     }
                     else
                     {
@@ -150,19 +183,6 @@ namespace Reproductor_de_Musica
                     {
                         alb = art.getAlbums().searchAlbum(album);
                         
-                    }else if(album == "")
-                    {
-                        if (art.getAlbums().searchName("Uknown Album"))
-                        {
-                            alb = art.getAlbums().searchAlbum(album);
-
-                        }
-                        else
-                        {
-                            alb = new Album("Uknown Album", art, Properties.Resources.album);
-                            art.getAlbums().add(alb);
-                            art.getAlbums().sort("year");
-                        }
                     }
                     else
                     {
@@ -333,21 +353,7 @@ namespace Reproductor_de_Musica
                     contextMenuStrip1.Show(Cursor.Position);
                 }
             }
-            if (e.Button == MouseButtons.Left)
-            {
-                foreach (ListViewItem lista in lstSongs.SelectedItems)//lstSongs.SelectedItems
-                {
-                    songQueue.empty();
-                    for (int i = lista.Index; i < lstSongs.Items.Count; i++)
-                    {
-                        
-                        enqueueSong(lstSongs.Items[i]);
-                        
-                    }
-
-                    playSong();
-                }
-            }
+            
                 
         }
         private Song getSong(ListViewItem song)
@@ -925,6 +931,17 @@ namespace Reproductor_de_Musica
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView1_MouseClick_2(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                    contextMenuStrip1.Show(Cursor.Position);
+                }
+            }
         }
     }
 }
