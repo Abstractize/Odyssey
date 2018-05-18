@@ -84,3 +84,4 @@ D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Repro
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
+D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form4.resources

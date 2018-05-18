@@ -42,5 +42,11 @@ namespace Reproductor_de_Musica
         {
             password = textBox2.Text;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 registry =new Form4();
+            registry.ShowDialog();
+        }
     }
 }
