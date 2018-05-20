@@ -24,9 +24,13 @@ namespace Reproductor_de_Musica
         bool trackBarClick = false;
         bool SongOrAlbumLV1 = false; //false for album, true for songs
         
-        List MP3Files = new List();
+        List Songs = new List();
         AlbumList Albums = new AlbumList();
         ArtistList Artists = new ArtistList();
+        private string listView2Mode;
+        private int LibraryMode = 0;//No creo que sea necesario
+
+        public int LibraryMode1 { get => LibraryMode; set => LibraryMode = value; }
 
         public Form1(string username)
         {
@@ -102,7 +106,9 @@ namespace Reproductor_de_Musica
                 foreach(var dic in SearchBox.FileNames)
                 {
                     
-                    bool add = false;   
+                    bool addArt = false;
+                    bool addAlb = false;
+                    
                     TagLib.File data = TagLib.File.Create(dic);
                     //Instance info on lists
                     Artist art;
@@ -173,7 +179,7 @@ namespace Reproductor_de_Musica
                     }
                     else
                     {
-                        add = true;
+                        addArt = true;
                         art = new Artist(artist, Properties.Resources.descarga__2_);//Change Image
                         
                         
@@ -186,6 +192,7 @@ namespace Reproductor_de_Musica
                     }
                     else
                     {
+                        addAlb = true;
                         alb = new Album(album, art, Properties.Resources.album);
                         art.getAlbums().add(alb);
                         art.getAlbums().sort("year");
@@ -198,64 +205,69 @@ namespace Reproductor_de_Musica
                     {
                         
                         newSong = new Song(name, art, alb, year, Disc, index, URL);
-                        
                         alb.getSongs().add(newSong);
-                        
-                        //alb.getSongs().sort();
-                        
                         alb.setYear(year);
-
-                        //Add image song in first song added
-                        /*Console.WriteLine(newSong.getName());
-                        Console.WriteLine(newSong.getArtist().getName());
-                        Console.WriteLine(newSong.getAlbum().getName());
-                        Console.WriteLine(newSong.getYear());
-                        Console.WriteLine(newSong.GetDisc());
-                        Console.WriteLine(newSong.getAlbumIndex());
-                        Console.WriteLine(newSong.getURL());*/
-
+                        Songs.add(newSong);
                     }
                                         
-                    if (add)
+                    if (addArt)
                     {
                         Artists.add(art);
-                        //Artists.sort();
-                        
-
+                    }
+                    if (addAlb)
+                    {
+                        Albums.add(alb);
                     }
                     
-                    
-
                 }
                 
             }
             drawOnSongList();
             drawOnArtistList();
+            drawOnAlbumList();
             Console.WriteLine("Items agregados");
         }
         public void drawOnAlbumList()
         {
+            listView2Mode = "album";
+            listView2.Items.Clear();
+            listView2.View = View.LargeIcon;
             int imageindex = 0;
             
             AlbumForArtist.Images.Clear();
-            for (int i = 0; i < Artists.getLength(); i++)
+            for (int i = 0; i < Albums.getLength(); i++)
             {
-                Artist art = Artists.getValue(i);
-                for (int j = 0; j < art.getAlbums().getLength(); j++)
-                {
-                    Album alb = art.getAlbums().getValue(j);
-                    AlbumForArtist.Images.Add(alb.GetBitImage());
-                    ListViewItem album = new ListViewItem(alb.getName(),imageindex);
-                    imageindex++;
+                Album alb = Albums.getValue(i);
+                AlbumForArtist.Images.Add(alb.GetBitImage());
+                ListViewItem album = new ListViewItem(alb.getName(), imageindex);
+                imageindex++;
 
-                    //album.SubItems.Add(alb.getArtist().getName());
-                    //album.SubItems.Add(alb.getYear().ToString());
-                    listView2.Items.Add(album);
-                }
+
+                listView2.Items.Add(album);
             }
+        }
+        public void drawOnAlbumSongList(ListViewItem lista)
+        {
+            listView2Mode = "song";
+            listView2.Items.Clear();
+            listView2.View = View.Details;
+            Album alb = Albums.searchAlbum(lista.Text);
+            for (int i = 0; i < alb.getSongs().getLength(); i++)
+            {
+                Song file = alb.getSongs().getValue(i);
+                TagLib.File data = TagLib.File.Create(file.getURL());
+                ListViewItem song = new ListViewItem((i+1).ToString());
+                song.SubItems.Add(file.getName());
+                song.SubItems.Add(setTime(data.Properties.Duration.ToString()));
+                song.SubItems.Add(file.getArtist().getName());
+                song.SubItems.Add(file.getAlbum().getName());
+                listView2.Items.Add(song);
+            }
+            
         }
         public void drawOnArtistList()
         {
+            
             toolStrip3.Items.Clear();
             for (int i = 0; i < Artists.getLength(); i++)
             {
@@ -271,7 +283,7 @@ namespace Reproductor_de_Musica
                 Artist.Image = art.GetImage();
                 Artist.ImageAlign = ContentAlignment.MiddleLeft;
                 Artist.TextImageRelation = TextImageRelation.ImageBeforeText;
-                //Artist.Size = new Size(180,30);
+                
                 Artist.ImageScaling = ToolStripItemImageScaling.None;
                 Artist.Font = new Font("MS Reference Sans Serif" , 9);
                 Artist.ForeColor = SystemColors.ControlLightLight;
@@ -286,29 +298,23 @@ namespace Reproductor_de_Musica
         }
         public void drawOnSongList()
         {
+            
             lstSongs.Items.Clear();
             lstSongs.View = View.Details;
-            for (int i = 0; i < Artists.getLength(); i++)
-            {
-                Artist art = Artists.getValue(i);
-                for (int j = 0; j < art.getAlbums().getLength(); j++)
-                {
-                    Album alb = art.getAlbums().getValue(j);
-                    for (int k = 0; k < alb.getSongs().getLength(); k++)
-                    {
-                        Song file = alb.getSongs().getValue(k);
 
-                        TagLib.File data = TagLib.File.Create(file.getURL());
-                        ListViewItem song = new ListViewItem(file.getName());
-                        
-                        lstSongs.Items.Add(song);
-                        song.SubItems.Add(setTime(data.Properties.Duration.ToString()));
-                        song.SubItems.Add(file.getArtist().getName());
-                        song.SubItems.Add(file.getAlbum().getName());
-                        song.SubItems.Add(file.getYear().ToString());
-                        song.SubItems.Add(file.getRating());
-                    }
-                }
+            for (int i = 0; i < Songs.getLength(); i++)
+            {
+                Song file = Songs.getValue(i);
+
+                TagLib.File data = TagLib.File.Create(file.getURL());
+                ListViewItem song = new ListViewItem(file.getName());
+
+                lstSongs.Items.Add(song);
+                song.SubItems.Add(setTime(data.Properties.Duration.ToString()));
+                song.SubItems.Add(file.getArtist().getName());
+                song.SubItems.Add(file.getAlbum().getName());
+                song.SubItems.Add(file.getYear().ToString());
+                song.SubItems.Add(file.getRating());
             }
         }
         private String setTime(String time)
@@ -322,6 +328,7 @@ namespace Reproductor_de_Musica
             }
             return Timer;
         }
+        //Artist Library
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             toolStrip3.Visible = true;
@@ -331,17 +338,19 @@ namespace Reproductor_de_Musica
             listView2.Visible = false;
             
         }
-
+        //Album Library
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             listView2.Items.Clear();
             toolStrip3.Visible = false;
-            drawOnAlbumList();
+            
             mode = 1;
             lstSongs.Visible = false;
             listView1.Visible = false;
             listView2.Visible = true;
             listView2.FullRowSelect = true;
+            drawOnAlbumList();
+            listView2Mode = "album";
         }
 
         private void lstSongs_MouseClick(object sender, MouseEventArgs e)
@@ -363,7 +372,7 @@ namespace Reproductor_de_Musica
             return file;
         }
         //Song Queue Function
-        private void enqueueSong(ListViewItem song)
+        private void enqueueSong(ListViewItem song)//No creo que sea necesaria
         {
             int index = song.Index;
             Song file = Artists.getTotalValue(index);
@@ -373,8 +382,6 @@ namespace Reproductor_de_Musica
         }
         private void enqueueSong(String Artist,String Album, String Name)
         {
-            
-            
             Song file = Artists.searchArtist(Artist).getAlbums().searchAlbum(Album).getSongs().searchSong(Name);
             songQueue.enqueue(file);
         }
@@ -941,6 +948,39 @@ namespace Reproductor_de_Musica
                 {
                     contextMenuStrip1.Show(Cursor.Position);
                 }
+            }
+        }
+
+        private void listView2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (listView2Mode == "album")
+                {
+                    foreach (ListViewItem lista in listView2.SelectedItems)
+                    {
+                        drawOnAlbumSongList(lista);
+                        listView2Mode = "song";
+
+                    }
+                }
+                else
+                {
+                    foreach (ListViewItem lista in listView2.SelectedItems)//lstSongs.SelectedItems
+                    {
+                        songQueue.empty();
+                        for (int i = lista.Index; i < lstSongs.Items.Count; i++)
+                        {
+                            
+                            enqueueSong(lista.SubItems[3].Text, lista.SubItems[4].Text, lista.SubItems[1].Text);
+
+                        }
+
+                        playSong();
+                    }
+                }
+                    
+                
             }
         }
     }

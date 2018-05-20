@@ -111,6 +111,9 @@ namespace Reproductor_de_Musica
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Library = new System.Windows.Forms.Panel();
             this.Messenger = new System.Windows.Forms.Panel();
             this.toolStripContainer3 = new System.Windows.Forms.ToolStripContainer();
@@ -124,6 +127,8 @@ namespace Reproductor_de_Musica
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.Chats = new System.Windows.Forms.ToolStrip();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -649,33 +654,33 @@ namespace Reproductor_de_Musica
             this.recomendToolStripMenuItem,
             this.recomendToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 136);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // songInfoToolStripMenuItem
             // 
             this.songInfoToolStripMenuItem.Name = "songInfoToolStripMenuItem";
-            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.songInfoToolStripMenuItem.Text = "Song Info";
             this.songInfoToolStripMenuItem.Click += new System.EventHandler(this.songInfoToolStripMenuItem_Click);
             // 
             // playNextToolStripMenuItem
             // 
             this.playNextToolStripMenuItem.Name = "playNextToolStripMenuItem";
-            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.playNextToolStripMenuItem.Text = "Play Next";
             // 
             // playLaterToolStripMenuItem
             // 
             this.playLaterToolStripMenuItem.Name = "playLaterToolStripMenuItem";
-            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.playLaterToolStripMenuItem.Text = "Play Later";
             this.playLaterToolStripMenuItem.Click += new System.EventHandler(this.playLaterToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // recomendToolStripMenuItem
@@ -688,7 +693,7 @@ namespace Reproductor_de_Musica
             this.toolStripMenuItem6,
             this.toolStripMenuItem7});
             this.recomendToolStripMenuItem.Name = "recomendToolStripMenuItem";
-            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.recomendToolStripMenuItem.Text = "Rate";
             this.recomendToolStripMenuItem.Click += new System.EventHandler(this.recomendToolStripMenuItem_Click);
             // 
@@ -737,7 +742,7 @@ namespace Reproductor_de_Musica
             // recomendToolStripMenuItem1
             // 
             this.recomendToolStripMenuItem1.Name = "recomendToolStripMenuItem1";
-            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.recomendToolStripMenuItem1.Text = "Recomend";
             // 
             // toolStripContainer4
@@ -869,6 +874,12 @@ namespace Reproductor_de_Musica
             // 
             this.listView2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView2.BackgroundImage")));
             this.listView2.BackgroundImageTiled = true;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15});
             this.listView2.LargeImageList = this.AlbumForArtist;
             this.listView2.Location = new System.Drawing.Point(185, 0);
             this.listView2.Name = "listView2";
@@ -876,6 +887,19 @@ namespace Reproductor_de_Musica
             this.listView2.TabIndex = 19;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.Visible = false;
+            this.listView2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView2_MouseDoubleClick);
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "No.";
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Name";
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Duration";
             // 
             // Library
             // 
@@ -1022,6 +1046,14 @@ namespace Reproductor_de_Musica
             this.Chats.TabIndex = 0;
             this.Chats.Text = "toolStrip4";
             // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Artist";
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Album";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1089,8 +1121,8 @@ namespace Reproductor_de_Musica
                     songQueue.empty();
                     for (int i = lista.Index; i < lstSongs.Items.Count; i++)
                     {
-
-                        enqueueSong(lstSongs.Items[i]);
+                        Console.WriteLine(lstSongs.Items[i].SubItems[2].Text, lstSongs.Items[i].SubItems[3].Text, lstSongs.Items[i].Text);
+                        enqueueSong(lstSongs.Items[i].SubItems[2].Text, lstSongs.Items[i].SubItems[3].Text, lstSongs.Items[i].Text);
 
                     }
 
@@ -1125,7 +1157,7 @@ namespace Reproductor_de_Musica
         {
             Player.settings.volume = volumeBar.Value;
         }
-
+        //Songs Library
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
             if (!Artists.empty())
@@ -1290,6 +1322,11 @@ namespace Reproductor_de_Musica
         private ToolStripButton toolStripButton9;
         private ToolStripButton toolStripButton11;
         private TextBox textBox1;
+        private ColumnHeader columnHeader11;
+        private ColumnHeader columnHeader12;
+        private ColumnHeader columnHeader13;
+        private ColumnHeader columnHeader14;
+        private ColumnHeader columnHeader15;
     }
 }
 

@@ -12,19 +12,19 @@ namespace Reproductor_de_Musica
         private String Password;
         private int Age;
         private String FullName;
-        private StringList genres;
+        private StringList Genres;
 
         public string userName
         {
             get { return this.UserName; }
             set => UserName = value;
         }
-        /*
+        
         public string password { get => Password; set => Password = value; }
         public int age { get => Age; set => Age = value; }
         public string fullName { get => FullName; set => FullName = value; }
-        internal StringList genres { get => Genres; set => Genres = value; }
-        */
+        public StringList genres { get => Genres; set => Genres = value; }
+        
         public String getUserName()
         {
             return this.UserName;
