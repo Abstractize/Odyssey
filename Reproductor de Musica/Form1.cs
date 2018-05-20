@@ -36,7 +36,7 @@ namespace Reproductor_de_Musica
             InitializeComponent();
             userButton.Text = username;
             Console.WriteLine(Player.settings.volume);
-            Player.settings.volume = 100;
+            
             Console.WriteLine(Player.settings.volume);
             
 

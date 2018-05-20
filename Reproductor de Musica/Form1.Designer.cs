@@ -114,6 +114,8 @@ namespace Reproductor_de_Musica
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Library = new System.Windows.Forms.Panel();
             this.Messenger = new System.Windows.Forms.Panel();
             this.toolStripContainer3 = new System.Windows.Forms.ToolStripContainer();
@@ -127,8 +129,6 @@ namespace Reproductor_de_Musica
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.Chats = new System.Windows.Forms.ToolStrip();
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -592,7 +592,7 @@ namespace Reproductor_de_Musica
             this.volumeBar.ForeColor = System.Drawing.Color.Red;
             this.volumeBar.IndentHeight = 6;
             this.volumeBar.Location = new System.Drawing.Point(544, 24);
-            this.volumeBar.Maximum = 10;
+            this.volumeBar.Maximum = 100;
             this.volumeBar.Minimum = 0;
             this.volumeBar.Name = "volumeBar";
             this.volumeBar.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -901,6 +901,14 @@ namespace Reproductor_de_Musica
             // 
             this.columnHeader13.Text = "Duration";
             // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Artist";
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Album";
+            // 
             // Library
             // 
             this.Library.BackColor = System.Drawing.Color.Transparent;
@@ -1045,14 +1053,6 @@ namespace Reproductor_de_Musica
             this.Chats.Size = new System.Drawing.Size(205, 443);
             this.Chats.TabIndex = 0;
             this.Chats.Text = "toolStrip4";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Artist";
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Album";
             // 
             // Form1
             // 
