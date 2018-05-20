@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 
 namespace Reproductor_de_Musica
 {
-    class Client : ClientActions
+    public class Client : ClientActions
     {
 
         const int PORT_NO = 10578;

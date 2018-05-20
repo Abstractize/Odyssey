@@ -34,6 +34,10 @@ namespace Reproductor_de_Musica
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Artists", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Albums", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Songs", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Songs by Lyrics", System.Windows.Forms.HorizontalAlignment.Left);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,6 +133,9 @@ namespace Reproductor_de_Musica
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.Chats = new System.Windows.Forms.ToolStrip();
+            this.Searches = new System.Windows.Forms.Panel();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -145,6 +152,7 @@ namespace Reproductor_de_Musica
             this.toolStrip4.SuspendLayout();
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
+            this.Searches.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -312,6 +320,7 @@ namespace Reproductor_de_Musica
             this.toolStripButton5,
             this.toolStripSeparator9,
             this.toolStripButton6,
+            this.toolStripTextBox2,
             this.userButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
@@ -436,6 +445,7 @@ namespace Reproductor_de_Musica
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(23, 67);
             this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // userButton
             // 
@@ -1054,6 +1064,43 @@ namespace Reproductor_de_Musica
             this.Chats.TabIndex = 0;
             this.Chats.Text = "toolStrip4";
             // 
+            // Searches
+            // 
+            this.Searches.BackColor = System.Drawing.Color.Transparent;
+            this.Searches.Controls.Add(this.listView3);
+            this.Searches.Location = new System.Drawing.Point(211, 128);
+            this.Searches.Name = "Searches";
+            this.Searches.Size = new System.Drawing.Size(1139, 468);
+            this.Searches.TabIndex = 20;
+            this.Searches.Visible = false;
+            // 
+            // listView3
+            // 
+            listViewGroup5.Header = "Artists";
+            listViewGroup5.Name = "Artists";
+            listViewGroup6.Header = "Albums";
+            listViewGroup6.Name = "Albums";
+            listViewGroup7.Header = "Songs";
+            listViewGroup7.Name = "Songs";
+            listViewGroup8.Header = "Songs by Lyrics";
+            listViewGroup8.Name = "SongsByLyrics";
+            this.listView3.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8});
+            this.listView3.LargeImageList = this.AlbumForArtist;
+            this.listView3.Location = new System.Drawing.Point(0, 0);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(1139, 468);
+            this.listView3.TabIndex = 0;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 70);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1062,6 +1109,7 @@ namespace Reproductor_de_Musica
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.Searches);
             this.Controls.Add(this.Messenger);
             this.Controls.Add(this.Library);
             this.Controls.Add(this.volumeBar);
@@ -1100,6 +1148,7 @@ namespace Reproductor_de_Musica
             this.toolStripContainer2.ContentPanel.ResumeLayout(false);
             this.toolStripContainer2.ResumeLayout(false);
             this.toolStripContainer2.PerformLayout();
+            this.Searches.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1328,6 +1377,9 @@ namespace Reproductor_de_Musica
         private ColumnHeader columnHeader13;
         private ColumnHeader columnHeader14;
         private ColumnHeader columnHeader15;
+        private Panel Searches;
+        private ListView listView3;
+        private ToolStripTextBox toolStripTextBox2;
     }
 }
 

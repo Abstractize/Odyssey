@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class Song
+    public class Song
     {
         private String URL;
         private String name;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class Artist
+    public class Artist
     {
         private Bitmap image;
         private String Name;

@@ -15,7 +15,9 @@ namespace Reproductor_de_Musica
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
-       [STAThread]
+        static Client client = new Client();
+
+        [STAThread]
         static void Main(string[] args)
         {
             Thread playerThread = new Thread(new ThreadStart(startGUI));
@@ -35,12 +37,12 @@ namespace Reproductor_de_Musica
 
 
 
-           Application.Run(new Form1(loginScreen.getUsername()));
+           Application.Run(new Form1(loginScreen.getUsername(),client));
         }
 
         public static void startClient()
         {
-            Client client = new Client();
+            
             client.connect();
         }
 

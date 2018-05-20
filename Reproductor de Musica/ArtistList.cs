@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class ArtistList
+    public class ArtistList
     {
         //Atributos
         private Node<Artist> head;

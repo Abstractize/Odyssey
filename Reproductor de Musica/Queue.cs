@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class Queue<Type>
+    public class Queue<Type>
     {
         private Node<Type> head;
         private int length;

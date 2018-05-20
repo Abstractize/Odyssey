@@ -22,6 +22,8 @@ namespace Reproductor_de_Musica
         bool Play = false;
         bool trackBarClick = false;
         bool SongOrAlbumLV1 = false; //false for album, true for songs
+
+        Client toServer;
         
         List Songs = new List();
         AlbumList Albums = new AlbumList();
@@ -31,13 +33,11 @@ namespace Reproductor_de_Musica
 
         public int LibraryMode1 { get => LibraryMode; set => LibraryMode = value; }
 
-        public Form1(string username)
+        public Form1(string username,Client client)
         {
             InitializeComponent();
             userButton.Text = username;
-            Console.WriteLine(Player.settings.volume);
-            
-            Console.WriteLine(Player.settings.volume);
+            toServer = client;
             
 
         }
@@ -987,6 +987,12 @@ namespace Reproductor_de_Musica
                     
                 
             }
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            String search = toolStripTextBox2.Text;
+
         }
     }
 }

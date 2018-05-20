@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class Album
+    public class Album
     {
         //Define on Create
         private String name;
