@@ -930,12 +930,14 @@ namespace Reproductor_de_Musica
         {
             Library.Visible = true;
             Messenger.Visible = false;
+            Searches.Visible = false;
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             Messenger.Visible = true;
             Library.Visible = false;
+            Searches.Visible = false;
 
         }
 
@@ -991,7 +993,47 @@ namespace Reproductor_de_Musica
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
+            AlbumForArtist.Images.Clear();
+            Searches.Visible = true;
             String search = toolStripTextBox2.Text;
+            ArtistList artList = toServer.getSearchedArtist(search);
+            AlbumList albList = toServer.getSearchedAlbum(search);
+            List songList = toServer.getSearchedSong(search);
+            //Artists
+            for (int i = 0; i < artList.getLength(); i++)
+            {
+                Artist artist = artList.getValue(i);
+                ListViewItem art = new ListViewItem(artist.getName(), i , listView3.Groups[0]);
+                AlbumForArtist.Images.Add(artist.GetImage());
+
+                art.Text = artist.getName();
+                listView3.Items.Add(art);
+
+            }
+            //Albums
+            for (int i = 0; i < albList.getLength(); i++)
+            {
+                Album album = albList.getValue(i);
+                ListViewItem art = new ListViewItem(album.getName(), (artList.getLength()-1+i), listView3.Groups[1]);
+                AlbumForArtist.Images.Add(album.GetBitImage());
+
+                art.Text = album.getName();
+                listView3.Items.Add(art);
+            }
+            //Songs
+            for (int i = 0; i < songList.getLength(); i++)
+            {
+                Song song = songList.getValue(i);
+                ListViewItem art = new ListViewItem(song.getName(), (artList.getLength() - 1 + albList.getLength() -1 + i), listView3.Groups[2]);
+                AlbumForArtist.Images.Add(song.getAlbum().GetBitImage());
+
+                art.Text = song.getName();
+                listView3.Items.Add(art);
+            }
+        }
+        //Searches Click
+        private void listView3_Click(object sender, EventArgs e)
+        {
 
         }
     }

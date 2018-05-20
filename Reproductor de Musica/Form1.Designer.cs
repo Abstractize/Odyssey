@@ -34,10 +34,10 @@ namespace Reproductor_de_Musica
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Artists", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Albums", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Songs", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Songs by Lyrics", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Artists", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Albums", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Songs", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Songs by Lyrics", System.Windows.Forms.HorizontalAlignment.Left);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +71,7 @@ namespace Reproductor_de_Musica
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.userButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.changeProfilePicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,7 +136,6 @@ namespace Reproductor_de_Musica
             this.Chats = new System.Windows.Forms.ToolStrip();
             this.Searches = new System.Windows.Forms.Panel();
             this.listView3 = new System.Windows.Forms.ListView();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -446,6 +446,11 @@ namespace Reproductor_de_Musica
             this.toolStripButton6.Size = new System.Drawing.Size(23, 67);
             this.toolStripButton6.Text = "toolStripButton6";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 70);
             // 
             // userButton
             // 
@@ -1068,38 +1073,35 @@ namespace Reproductor_de_Musica
             // 
             this.Searches.BackColor = System.Drawing.Color.Transparent;
             this.Searches.Controls.Add(this.listView3);
-            this.Searches.Location = new System.Drawing.Point(211, 128);
+            this.Searches.Location = new System.Drawing.Point(0, 128);
             this.Searches.Name = "Searches";
-            this.Searches.Size = new System.Drawing.Size(1139, 468);
+            this.Searches.Size = new System.Drawing.Size(1350, 468);
             this.Searches.TabIndex = 20;
             this.Searches.Visible = false;
             // 
             // listView3
             // 
-            listViewGroup5.Header = "Artists";
-            listViewGroup5.Name = "Artists";
-            listViewGroup6.Header = "Albums";
-            listViewGroup6.Name = "Albums";
-            listViewGroup7.Header = "Songs";
-            listViewGroup7.Name = "Songs";
-            listViewGroup8.Header = "Songs by Lyrics";
-            listViewGroup8.Name = "SongsByLyrics";
+            this.listView3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView3.BackgroundImage")));
+            listViewGroup1.Header = "Artists";
+            listViewGroup1.Name = "Artists";
+            listViewGroup2.Header = "Albums";
+            listViewGroup2.Name = "Albums";
+            listViewGroup3.Header = "Songs";
+            listViewGroup3.Name = "Songs";
+            listViewGroup4.Header = "Songs by Lyrics";
+            listViewGroup4.Name = "SongsByLyrics";
             this.listView3.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4});
             this.listView3.LargeImageList = this.AlbumForArtist;
             this.listView3.Location = new System.Drawing.Point(0, 0);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(1139, 468);
+            this.listView3.Size = new System.Drawing.Size(1350, 468);
             this.listView3.TabIndex = 0;
             this.listView3.UseCompatibleStateImageBehavior = false;
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 70);
+            this.listView3.Click += new System.EventHandler(this.listView3_Click);
             // 
             // Form1
             // 

@@ -139,7 +139,19 @@ namespace Reproductor_de_Musica
             Console.WriteLine("Server responde: " + recv);
         }
 
+        public ArtistList getSearchedArtist(string search)
+        {
+            throw new NotImplementedException();
+        }
 
+        public AlbumList getSearchedAlbum(string search)
+        {
+            throw new NotImplementedException();
+        }
 
+        public List getSearchedSong(string search)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
