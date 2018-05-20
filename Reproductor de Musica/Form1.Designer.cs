@@ -669,34 +669,35 @@ namespace Reproductor_de_Musica
             this.recomendToolStripMenuItem,
             this.recomendToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // songInfoToolStripMenuItem
             // 
             this.songInfoToolStripMenuItem.Name = "songInfoToolStripMenuItem";
-            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.songInfoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.songInfoToolStripMenuItem.Text = "Song Info";
             this.songInfoToolStripMenuItem.Click += new System.EventHandler(this.songInfoToolStripMenuItem_Click);
             // 
             // playNextToolStripMenuItem
             // 
             this.playNextToolStripMenuItem.Name = "playNextToolStripMenuItem";
-            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.playNextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playNextToolStripMenuItem.Text = "Play Next";
             // 
             // playLaterToolStripMenuItem
             // 
             this.playLaterToolStripMenuItem.Name = "playLaterToolStripMenuItem";
-            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.playLaterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playLaterToolStripMenuItem.Text = "Play Later";
             this.playLaterToolStripMenuItem.Click += new System.EventHandler(this.playLaterToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // recomendToolStripMenuItem
             // 
@@ -708,7 +709,7 @@ namespace Reproductor_de_Musica
             this.toolStripMenuItem6,
             this.toolStripMenuItem7});
             this.recomendToolStripMenuItem.Name = "recomendToolStripMenuItem";
-            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.recomendToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.recomendToolStripMenuItem.Text = "Rate";
             this.recomendToolStripMenuItem.Click += new System.EventHandler(this.recomendToolStripMenuItem_Click);
             // 
@@ -757,7 +758,7 @@ namespace Reproductor_de_Musica
             // recomendToolStripMenuItem1
             // 
             this.recomendToolStripMenuItem1.Name = "recomendToolStripMenuItem1";
-            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.recomendToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.recomendToolStripMenuItem1.Text = "Recomend";
             // 
             // toolStripContainer4

@@ -31,8 +31,9 @@ namespace Reproductor_de_Musica
         void sendAlbumList(AlbumList list);
         void sendArtistList(ArtistList list);
         void sendSongList(List list);
-        //Mandar MP3 a la bilblioteca
+        //Mandar MP3 a la bilblioteca y borrar
         void sendMP3File(Song song);
+        void deleteSong(String Artist, String Album, String Song);
         //Obtener Listas de la biblioteca
         AlbumList getAlbumList();
         ArtistList getArtistList();

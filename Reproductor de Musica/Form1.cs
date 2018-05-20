@@ -1088,5 +1088,16 @@ namespace Reproductor_de_Musica
             Albums = toServer.getAlbumList();
             Songs = toServer.getSongList();
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem element in lstSongs.SelectedItems)
+            {
+                toServer.deleteSong(element.SubItems[2].Text, element.SubItems[3].Text, element.Text);
+            }
+            Artists = toServer.getArtistList();
+            Albums = toServer.getAlbumList();
+            Songs = toServer.getSongList();
+        }
     }
 }
