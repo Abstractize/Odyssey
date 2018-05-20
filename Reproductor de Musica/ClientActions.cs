@@ -15,7 +15,7 @@ namespace Reproductor_de_Musica
         //Verifica si la contraseña es válida con el usario, retorna true si es así
 
         //Registation Form
-        void sendInfo(String username, String fullname, String password, List genres,int age );
+        void sendInfo(String username, String fullname, String password, StringList genres,int age );
         //Manda la información del usario al servidor para cree la cuenta
 
         //Principal Form

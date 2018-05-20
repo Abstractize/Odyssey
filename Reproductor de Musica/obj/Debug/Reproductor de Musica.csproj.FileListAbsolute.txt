@@ -85,3 +85,36 @@ D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Repro
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
 D:\Users\Gabo\Escritorio\Proyectos\Projects\Reproductor de Musica\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form4.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe.config
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.exe
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Reproductor de Musica.pdb
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Hqub.Lastfm.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Lpfm.LastFmScrobbler.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MACTrackBarLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.CoverArt.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.DiscId.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MetaBrainz.MusicBrainz.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Mono.HttpUtility.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MusicBrainzWebService.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\NAudio.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\taglib-sharp.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\MusicBrainzWebService.pdb
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\NAudio.xml
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\policy.2.0.taglib-sharp.config
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\Interop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csprojResolveAssemblyReference.cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Interop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.ResolveComReference.cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form1.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form2.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form3.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form4.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Properties.Resources.resources
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.csproj.GenerateResource.Cache
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
+C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb

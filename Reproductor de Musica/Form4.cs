@@ -36,12 +36,19 @@ namespace Reproductor_de_Musica
                 String Username = textBox1.Text;
                 String fullname = (textBox2.Text + " " + textBox3.Text);
                 String age = textBox4.Text;
+                String password = textBox5.Text;
                 int ageNum = Convert.ToInt32(age);
                 StringList genres = new StringList();
-                foreach (int genreindex in checkedListBox1.CheckedIndices)
+                foreach (object genre in checkedListBox1.CheckedItems)
                 {
-                    genres.add(checkedListBox1.CheckedItems[genreindex].ToString());
+                   genres.add(genre.ToString());
                 }
+
+                
+
+                Client client = new Client();
+                //client.setUserInfo(regisrtryUser);
+                client.sendInfo(Username, fullname, password, genres, ageNum);
 
 
 
@@ -50,6 +57,12 @@ namespace Reproductor_de_Musica
             catch{
 
             }
+        }
+
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
