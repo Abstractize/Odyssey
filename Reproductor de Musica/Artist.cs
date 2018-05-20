@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Class that stores the Artist and all its necesary info
+    /// </summary>
     public class Artist
     {
         private Bitmap image;

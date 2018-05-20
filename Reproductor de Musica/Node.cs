@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Nodes for the lists
+    /// </summary>
     public class Node<T>
     {
         private T value;

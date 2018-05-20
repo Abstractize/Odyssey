@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Class where the diferent Albums are stored
+    /// </summary>
     public class Album
     {
         //Define on Create

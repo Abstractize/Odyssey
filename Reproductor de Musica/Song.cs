@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
-{
+{   /// <summary>
+    /// Class to store the songs
+    /// </summary>
     public class Song
     {
         private String URL;

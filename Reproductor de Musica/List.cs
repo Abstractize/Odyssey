@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-     public class List
+    /// <summary>
+    /// Class to store the diferent Songs
+    /// </summary>
+    public class List
     {
         //Atributos
         private Node<Song> head;

@@ -10,6 +10,9 @@ using System.Xml.Serialization;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Client is the class that contains the properties of the connection between the Server and the app
+    /// </summary>
     public class Client : ClientActions
     {
 
@@ -190,6 +193,11 @@ namespace Reproductor_de_Musica
         }
 
         public void addArtist(string Artist)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void deleteSong(string Artist, string Album, string Song)
         {
             throw new NotImplementedException();
         }

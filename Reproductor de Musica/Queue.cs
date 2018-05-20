@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Queue to set an order of reproduction to the songs
+    /// </summary>
     public class Queue<Type>
     {
         private Node<Type> head;

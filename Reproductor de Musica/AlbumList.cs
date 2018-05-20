@@ -8,6 +8,10 @@ namespace Reproductor_de_Musica
 {
     public class AlbumList
     {
+        /// <summary>
+        /// Class that stores albums for the user to get them in an order
+        /// </summary>
+
         //Atributos
         private Node<Album> head;
         private int length;

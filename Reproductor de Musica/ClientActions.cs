@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Interface to set to the Client the Interface needs
+    /// </summary>
     interface ClientActions
     {
         //Login y Registro

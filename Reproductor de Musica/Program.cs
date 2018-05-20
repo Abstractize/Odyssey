@@ -10,6 +10,9 @@ using System.Threading;
 
 namespace Reproductor_de_Musica
 {
+    /// <summary>
+    /// Main
+    /// </summary>
     static class Program
     {
         /// <summary>

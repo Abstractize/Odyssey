@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
+
+    /// <summary>
+    /// List of String to send info to the server
+    /// </summary>
     public class StringList
     {
         //Atributos

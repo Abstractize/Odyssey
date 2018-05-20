@@ -8,6 +8,9 @@ namespace Reproductor_de_Musica
 {
     public class User
     {
+        /// <summary>
+        /// User of the app
+        /// </summary>
         private String UserName;
         private String Password;
         private int Age;
