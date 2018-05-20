@@ -29,7 +29,9 @@ namespace Reproductor_de_Musica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (toServer.verifyUsername(username, password))
+            String Username = textBox1.Text;
+            String password = textBox2.Text;
+            if (toServer.verifyUsername(Username, password))
             {
                 this.Close();
             }

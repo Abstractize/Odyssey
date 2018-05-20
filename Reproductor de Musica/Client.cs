@@ -51,7 +51,18 @@ namespace Reproductor_de_Musica
 
         public bool verifyUsername(string username, string password)
         {
-            throw new NotImplementedException();
+            startconection();
+            User logIn = new User();
+            logIn.userName = username;
+            //String hexpass = "";
+            logIn.password = password;//hexpass;
+            String xml = convertToXMLString(logIn);
+            sendINFO(xml);
+            if (recieveINFO().Equals("Usuario aceptado"))
+            {
+                return true;
+            }
+            return false;
         }
 
         public void connect()
@@ -97,7 +108,7 @@ namespace Reproductor_de_Musica
             newUser.fullName = fullName;
             newUser.password = password;
             newUser.userName = userName;
-            newUser.genres = genres;
+            newUser.favoriteGenres = genres;
 
             return newUser;
 
@@ -130,7 +141,7 @@ namespace Reproductor_de_Musica
             soc.Send(byData);
         }
 
-        private void recieveINFO()
+        private String recieveINFO()
         {
             byte[] buffer = new byte[16 * 1024];
             int iRx = soc.Receive(buffer);
@@ -140,6 +151,7 @@ namespace Reproductor_de_Musica
             int charLen = d.GetChars(buffer, 0, iRx, chars, 0);
             System.String recv = new System.String(chars);
             Console.WriteLine("Server responde: " + recv);
+            return recv;
         }
 
         public ArtistList getSearchedArtist(string search)

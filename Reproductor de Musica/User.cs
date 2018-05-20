@@ -26,7 +26,7 @@ namespace Reproductor_de_Musica
         public string password { get => Password; set => Password = value; }
         public int age { get => Age; set => Age = value; }
         public string fullName { get => FullName; set => FullName = value; }
-        public StringList genres { get => Genres; set => Genres = value; }
+        public StringList favoriteGenres { get => Genres; set => Genres = value; }
         
         public String getUserName()
         {
@@ -46,7 +46,7 @@ namespace Reproductor_de_Musica
         }
         public StringList GetGenres()
         {
-            return this.genres;
+            return this.favoriteGenres;
         }
     }
 }
