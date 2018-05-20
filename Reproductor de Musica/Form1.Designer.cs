@@ -1121,7 +1121,7 @@ namespace Reproductor_de_Musica
                     songQueue.empty();
                     for (int i = lista.Index; i < lstSongs.Items.Count; i++)
                     {
-                        Console.WriteLine(lstSongs.Items[i].SubItems[2].Text, lstSongs.Items[i].SubItems[3].Text, lstSongs.Items[i].Text);
+                        //Console.WriteLine(lstSongs.Items[i].SubItems[2].Text, lstSongs.Items[i].SubItems[3].Text, lstSongs.Items[i].Text);
                         enqueueSong(lstSongs.Items[i].SubItems[2].Text, lstSongs.Items[i].SubItems[3].Text, lstSongs.Items[i].Text);
 
                     }
@@ -1155,6 +1155,7 @@ namespace Reproductor_de_Musica
 
         private void volumeBar_ValueChanged(object sender, decimal value)
         {
+            
             Player.settings.volume = volumeBar.Value;
         }
         //Songs Library

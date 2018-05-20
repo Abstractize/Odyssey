@@ -54,6 +54,7 @@ namespace Reproductor_de_Musica
             }
             return flag;
         }
+        
         public int getMaxChar()
         {//Gets the max length of word with most characters
             int max = 0;
@@ -229,11 +230,6 @@ namespace Reproductor_de_Musica
                     }
                     
                 }
-                /*if ()
-                {
-                    
-                }*/
-                
             }
             return song.getValue();
         }

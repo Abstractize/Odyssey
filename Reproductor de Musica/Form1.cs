@@ -18,7 +18,6 @@ namespace Reproductor_de_Musica
     public partial class Form1 : Form
     {
         int mode = 0;// 0 Artist, 1 Album, 2 Song
-        Song prev;
         Queue<Song> songQueue = new Queue<Song>();
         bool Play = false;
         bool trackBarClick = false;
@@ -36,6 +35,10 @@ namespace Reproductor_de_Musica
         {
             InitializeComponent();
             userButton.Text = username;
+            Console.WriteLine(Player.settings.volume);
+            Player.settings.volume = 100;
+            Console.WriteLine(Player.settings.volume);
+            
 
         }
 
@@ -331,9 +334,10 @@ namespace Reproductor_de_Musica
         //Artist Library
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
+            mode = 0;
             toolStrip3.Visible = true;
             drawOnArtistList();
-            mode = 0;
+            
             lstSongs.Visible = false;
             listView2.Visible = false;
             
@@ -341,10 +345,11 @@ namespace Reproductor_de_Musica
         //Album Library
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
+            mode = 1;
             listView2.Items.Clear();
             toolStrip3.Visible = false;
             
-            mode = 1;
+            
             lstSongs.Visible = false;
             listView1.Visible = false;
             listView2.Visible = true;
@@ -370,15 +375,6 @@ namespace Reproductor_de_Musica
             int index = song.Index;
             Song file = Artists.getTotalValue(index);
             return file;
-        }
-        //Song Queue Function
-        private void enqueueSong(ListViewItem song)//No creo que sea necesaria
-        {
-            int index = song.Index;
-            Song file = Artists.getTotalValue(index);
-            songQueue.enqueue(file);
-            Console.WriteLine("enqueued" + file.getName());
-
         }
         private void enqueueSong(String Artist,String Album, String Name)
         {
@@ -408,7 +404,6 @@ namespace Reproductor_de_Musica
         {
             if (songQueue.getLength() != 0)
             {
-                prev = songQueue.peek();
                 songQueue.dequeue();
            
                 playSong();
@@ -419,47 +414,56 @@ namespace Reproductor_de_Musica
         }
         public void playPrev()
         {
-            if (prev != null)
-            {
-                Song now = songQueue.peek();//Fix
-                songQueue.empty();
-                if (mode == 2){
-                    int index = lstSongs.SelectedItems[0].Index;
+            Song now = songQueue.peek();
+            songQueue.empty();
+            if (mode == 2){//Song Mode
+            int index = Songs.getIndex(now);
+                if (index != 0)
+                {
                     for (int i = index - 1; i < lstSongs.Items.Count; i++)
                     {
-                        Console.WriteLine("i:" + i + "," + "max:" + lstSongs.Items.Count);
-                        enqueueSong(lstSongs.Items[i]);
-                        Console.WriteLine(lstSongs.Items[i]);
-                    }
-                    if (songQueue.getLength() != 0)
-                    {
-                        
-                        prev = getSong(lstSongs.Items[index - 1]);
-                        playSong();
-                        
+                    Song data = Songs.getValue(i);
+                    enqueueSong(data.getArtist().getName(), data.getAlbum().getName(), data.getName());
 
                     }
+
                 }
-                else if(mode == 0)
+                    
+            }
+            else if(mode == 0)//Artist mode
+            {
+                int index = now.getArtist().getTotalIndex(now.getName());
+                if (index != 0)
                 {
-                    int index = listView1.SelectedItems[0].Index;
                     for (int i = index - 1; i < listView1.Items.Count; i++)
                     {
-                        Console.WriteLine("i:" + i + "," + "max:" + listView1.Items.Count);
-                        enqueueSong(listView1.Items[i]);
-                        Console.WriteLine(lstSongs.Items[i]);
-                    }
-                    if (songQueue.getLength() != 0)
-                    {
-                        playSong();
-                        prev = getSong(listView1.Items[index - 1]);
+
+                        String art = listView1.Items[i].SubItems[3].Text;
+                        String alb = listView1.Items[i].Group.Header;
+                        String nam = listView1.Items[i].SubItems[0].Name;
+                        Console.WriteLine(art + "," + alb + "," + nam);
+                        enqueueSong(art, alb, nam);
 
                     }
                 }
-                
             }
-            
-            
+            else if (mode == 1)//Album mode
+                {
+                int index = now.getAlbum().getSongs().getIndex(now);
+                if (index != 0){
+                    for (int i = index - 1; i < listView2.Items.Count; i++)
+                    {
+                        ListViewItem lista = listView2.Items[i];
+                        enqueueSong(lista.SubItems[3].Text, lista.SubItems[4].Text, lista.SubItems[1].Text);
+
+                    }
+                }
+                   
+            }
+            if (songQueue.getLength() != 0)
+            {
+                playSong();
+            }
         }
         //Images
         private TagLib.IPicture getImage(String dic)
@@ -849,7 +853,7 @@ namespace Reproductor_de_Musica
         {
             foreach (ListViewItem lista in lstSongs.SelectedItems)
             {
-                enqueueSong(lista);
+                enqueueSong(lista.SubItems[2].Text, lista.SubItems[3].Text, lista.Text);
 
             }
             
@@ -951,6 +955,7 @@ namespace Reproductor_de_Musica
             }
         }
 
+        //By Album
         private void listView2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -969,10 +974,10 @@ namespace Reproductor_de_Musica
                     foreach (ListViewItem lista in listView2.SelectedItems)//lstSongs.SelectedItems
                     {
                         songQueue.empty();
-                        for (int i = lista.Index; i < lstSongs.Items.Count; i++)
+                        for (int i = lista.Index; i < listView2.Items.Count; i++)
                         {
-                            
-                            enqueueSong(lista.SubItems[3].Text, lista.SubItems[4].Text, lista.SubItems[1].Text);
+                            Console.WriteLine(listView2.Items[i].SubItems[3].Text + listView2.Items[i].SubItems[4].Text + listView2.Items[i].SubItems[1].Text);
+                            enqueueSong(listView2.Items[i].SubItems[3].Text, listView2.Items[i].SubItems[4].Text, listView2.Items[i].SubItems[1].Text);
 
                         }
 

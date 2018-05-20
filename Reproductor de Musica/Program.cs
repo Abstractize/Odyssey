@@ -34,7 +34,8 @@ namespace Reproductor_de_Musica
             Application.Run(loginScreen);
 
 
-            Application.Run(new Form1(loginScreen.getUsername()));
+
+           Application.Run(new Form1(loginScreen.getUsername()));
         }
 
         public static void startClient()

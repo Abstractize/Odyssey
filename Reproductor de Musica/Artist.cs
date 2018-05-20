@@ -22,7 +22,28 @@ namespace Reproductor_de_Musica
             this.image = Image;
 
         }
-
+        public int getTotalIndex(string name)
+        {
+            int index = 0;
+            Node<Album> alb = this.getAlbums().getHead();
+            Node<Song> song = alb.getValue().getSongs().getHead();
+            String songName = song.getValue().getName();
+            while (songName != name)
+            {
+                song = song.getNext();
+                songName = song.getValue().getName();
+                index++;
+                if (song == null)
+                {
+                    alb = alb.getNext();
+                    if (alb != null)
+                    {
+                        song = alb.getValue().getSongs().getHead();
+                    }
+                }
+            }
+            return index;
+        }
         //Getters y Setters
         public String getName()
         {
