@@ -153,5 +153,45 @@ namespace Reproductor_de_Musica
         {
             throw new NotImplementedException();
         }
+
+        public void sendAlbumList(AlbumList list)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void sendArtistList(ArtistList list)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void sendSongList(List list)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ArtistList getArtistList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List getSongList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addSong(string Artist, string Album, string Song)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addAlbum(string Artist, string Album)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addArtist(string Artist)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

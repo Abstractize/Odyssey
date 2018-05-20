@@ -21,7 +21,6 @@ namespace Reproductor_de_Musica
         Queue<Song> songQueue = new Queue<Song>();
         bool Play = false;
         bool trackBarClick = false;
-        bool SongOrAlbumLV1 = false; //false for album, true for songs
 
         Client toServer;
         
@@ -29,17 +28,13 @@ namespace Reproductor_de_Musica
         AlbumList Albums = new AlbumList();
         ArtistList Artists = new ArtistList();
         private string listView2Mode;
-        private int LibraryMode = 0;//No creo que sea necesario
 
-        public int LibraryMode1 { get => LibraryMode; set => LibraryMode = value; }
 
         public Form1(string username,Client client)
         {
             InitializeComponent();
             userButton.Text = username;
             toServer = client;
-            
-
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -206,8 +201,8 @@ namespace Reproductor_de_Musica
                     //Add to Songs
                     if (!alb.getSongs().searchName(name))
                     {
-                        
                         newSong = new Song(name, art, alb, year, Disc, index, URL);
+                        toServer.sendMP3File(newSong);
                         alb.getSongs().add(newSong);
                         alb.setYear(year);
                         Songs.add(newSong);
@@ -225,6 +220,12 @@ namespace Reproductor_de_Musica
                 }
                 
             }
+            toServer.sendArtistList(Artists);
+            toServer.sendAlbumList(Albums);
+            toServer.sendSongList(Songs);
+            Artists = toServer.getArtistList();
+            Albums = toServer.getAlbumList();
+            Songs = toServer.getSongList();
             drawOnSongList();
             drawOnArtistList();
             drawOnAlbumList();
@@ -506,91 +507,132 @@ namespace Reproductor_de_Musica
                 {
                     if (dic.EndsWith(".mp3"))
                     {
-                        bool add = false;   
-                    TagLib.File data = TagLib.File.Create(dic);
-                    //Instance info on lists
-                    Artist art;
-                    Album alb;
-                    Song newSong;
-                    //Get SongInfo
-                    String name = data.Tag.Title;
-                    String album = data.Tag.Album;
-                    uint year = data.Tag.Year;
-                    uint index = data.Tag.Track;
-                    uint Disc = data.Tag.Disc;
-                    String URL = dic;
-                    String artist = data.Tag.FirstAlbumArtist;
-                    
-                    //Add to Artist
-                    if (Artists.searchName(artist))
-                    {
-                        art = Artists.searchArtist(artist);
-                        
-                    }
-                    else
-                    {
-                        add = true;
-                        art = new Artist(artist, Properties.Resources.descarga__2_);//Change Image
-                        
-                        
-                    }
-                    //Add to Album
-                    if (art.getAlbums().searchName(album))
-                    {
-                        alb = art.getAlbums().searchAlbum(album);
-                        
-                    }
-                    else
-                    {
-                        alb = new Album(album, art, Properties.Resources.album);
-                        art.getAlbums().add(alb);
-                        art.getAlbums().sort("year");
-                        
-                        
+                        bool addArt = false;
+                        bool addAlb = false;
 
-                    }
-                    //Add to Songs
-                    if (!alb.getSongs().searchName(name))
-                    {
-                        
-                        newSong = new Song(name, art, alb, year, Disc, index, URL);
-                        
-                        alb.getSongs().add(newSong);
-                        
-                        //alb.getSongs().sort();
-                        
-                        alb.setYear(year);
+                        TagLib.File data = TagLib.File.Create(dic);
+                        //Instance info on lists
+                        Artist art;
+                        Album alb;
+                        Song newSong;
+                        //Get SongInfo
+                        String artist;
+                        String name;
+                        String album;
+                        uint year;
+                        uint index = data.Tag.Track;
+                        uint Disc;
+                        String URL = dic;
+                        //Artist
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+                        try
+                        {
+                            artist = data.Tag.Artists[0];
+                        }
+                        catch
+                        {
+                            artist = "Uknown Artist";
 
-                        //Add image song in first song added
-                        /*Console.WriteLine(newSong.getName());
-                        Console.WriteLine(newSong.getArtist().getName());
-                        Console.WriteLine(newSong.getAlbum().getName());
-                        Console.WriteLine(newSong.getYear());
-                        Console.WriteLine(newSong.GetDisc());
-                        Console.WriteLine(newSong.getAlbumIndex());
-                        Console.WriteLine(newSong.getURL());*/
+                        }
+                        //Title
+                        try
+                        {
+                            name = data.Tag.Title;
+                        }
+                        catch
+                        {
+                            name = "Uknown Song";
+                        }
+                        //Album
+                        try
+                        {
+                            album = data.Tag.Album;
+                        }
+                        catch
+                        {
+                            album = "Uknown album";
+                        }
+                        //Year
+                        try
+                        {
+                            year = data.Tag.Year;
+                        }
+                        catch
+                        {
+                            year = 0;
+                        }
+                        //Disc
+                        try
+                        {
+                            Disc = data.Tag.Disc;
+                        }
+                        catch
+                        {
+                            Disc = 1;
+                        }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
-                    }
-                                        
-                    if (add)
-                    {
-                        Artists.add(art);
-                        //Artists.sort();
-                        
+                        //Add to Artist
+                        if (Artists.searchName(artist))
+                        {
+                            art = Artists.searchArtist(artist);
 
-                    }
-                    }
-                    
+                        }
+                        else
+                        {
+                            addArt = true;
+                            art = new Artist(artist, Properties.Resources.descarga__2_);//Change Image
 
+
+                        }
+                        //Add to Album
+                        if (art.getAlbums().searchName(album))
+                        {
+                            alb = art.getAlbums().searchAlbum(album);
+
+                        }
+                        else
+                        {
+                            addAlb = true;
+                            alb = new Album(album, art, Properties.Resources.album);
+                            art.getAlbums().add(alb);
+                            art.getAlbums().sort("year");
+
+
+
+                        }
+                        //Add to Songs
+                        if (!alb.getSongs().searchName(name))
+                        {
+
+                            newSong = new Song(name, art, alb, year, Disc, index, URL);
+                            alb.getSongs().add(newSong);
+                            alb.setYear(year);
+                            Songs.add(newSong);
+                        }
+
+                        if (addArt)
+                        {
+                            Artists.add(art);
+                        }
+                        if (addAlb)
+                        {
+                            Albums.add(alb);
+                        }
+                    }
                 }
-
-
-
+                toServer.sendArtistList(Artists);
+                toServer.sendAlbumList(Albums);
+                toServer.sendSongList(Songs);
+                Artists = toServer.getArtistList();
+                Albums = toServer.getAlbumList();
+                Songs = toServer.getSongList();
+                drawOnSongList();
+                drawOnArtistList();
+                drawOnAlbumList();
+                Console.WriteLine("Items agregados");
             }
-            lstSongs.Items.Clear();
-            drawOnSongList();
         }
-
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
@@ -806,14 +848,7 @@ namespace Reproductor_de_Musica
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)//edit
         {
-            foreach(ListViewItem album in listView1.SelectedItems){
-                if (!SongOrAlbumLV1)
-                {
-                    //listView1.Items.Clear();
-                    //Album alb = album.Name;
-                }
-                
-            }
+            
        
         }
 
@@ -990,7 +1025,7 @@ namespace Reproductor_de_Musica
                 
             }
         }
-
+        //Search
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
             AlbumForArtist.Images.Clear();
@@ -1016,7 +1051,7 @@ namespace Reproductor_de_Musica
                 Album album = albList.getValue(i);
                 ListViewItem art = new ListViewItem(album.getName(), (artList.getLength()-1+i), listView3.Groups[1]);
                 AlbumForArtist.Images.Add(album.GetBitImage());
-
+                art.SubItems.Add(album.getArtist().getName());
                 art.Text = album.getName();
                 listView3.Items.Add(art);
             }
@@ -1026,7 +1061,8 @@ namespace Reproductor_de_Musica
                 Song song = songList.getValue(i);
                 ListViewItem art = new ListViewItem(song.getName(), (artList.getLength() - 1 + albList.getLength() -1 + i), listView3.Groups[2]);
                 AlbumForArtist.Images.Add(song.getAlbum().GetBitImage());
-
+                art.SubItems.Add(song.getArtist().getName());
+                art.SubItems.Add(song.getAlbum().getName());
                 art.Text = song.getName();
                 listView3.Items.Add(art);
             }
@@ -1034,7 +1070,23 @@ namespace Reproductor_de_Musica
         //Searches Click
         private void listView3_Click(object sender, EventArgs e)
         {
-
+            foreach (ListViewItem element in listView3.SelectedItems)
+            {
+                if (element.Group == listView3.Groups[0])//Artist
+                {
+                    toServer.addArtist(element.Text);
+                }else if (element.Group == listView3.Groups[1])//Album
+                {
+                    toServer.addAlbum(element.Text,element.SubItems[1].Text);
+                }
+                else if(element.Group == listView3.Groups[2])//Song
+                {
+                    toServer.addSong(element.Text, element.SubItems[2].Text, element.SubItems[1].Text);
+                }
+            }
+            Artists = toServer.getArtistList();
+            Albums = toServer.getAlbumList();
+            Songs = toServer.getSongList();
         }
     }
 }
