@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reproductor_de_Musica
 {
-    class Node<T>
+    public class Node<T>
     {
         private T value;
         private Node<T> next;
