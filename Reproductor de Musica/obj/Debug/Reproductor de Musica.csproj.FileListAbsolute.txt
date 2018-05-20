@@ -119,3 +119,4 @@ C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Mus
 C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.exe
 C:\Users\Steve\Desktop\Cup of te\Proyectos\Second\MusicPLayer\Reproductor de Musica\obj\Debug\Reproductor de Musica.pdb
 D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Form4.resources
+D:\Users\Gabo\Escritorio\Proyectos\Odyssey\Reproductor de Musica\obj\Debug\Reproductor_de_Musica.Error.resources

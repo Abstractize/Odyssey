@@ -9,9 +9,9 @@ namespace Reproductor_de_Musica
     interface ClientActions
     {
         
-        bool verifyUsername(String username);
+        bool verifyUsername(String username,String password);
        
-        bool verifyPassword(String password);
+        
         
         void sendInfo(String username, String fullname, String password, StringList genres,int age );
         

@@ -46,7 +46,7 @@ namespace Reproductor_de_Musica
             throw new NotImplementedException();
         }
 
-        public bool verifyUsername(string username)
+        public bool verifyUsername(string username, string password)
         {
             throw new NotImplementedException();
         }

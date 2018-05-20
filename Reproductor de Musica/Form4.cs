@@ -43,7 +43,7 @@ namespace Reproductor_de_Musica
                 {
                    genres.add(genre.ToString());
                 }
-
+                //genres.Print();
                 
 
                 Client client = new Client();
@@ -61,6 +61,11 @@ namespace Reproductor_de_Musica
 
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }

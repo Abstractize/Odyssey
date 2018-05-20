@@ -168,6 +168,13 @@ namespace Reproductor_de_Musica
                 }
             }
         }
+        public void Print()
+        {
+            for (int i = 0; i < this.getLength(); i++)
+            {
+                Console.WriteLine(this.getValue(i));
+            }
+        }
         //Getters y Setters
         public Node<String> getHead()
         {

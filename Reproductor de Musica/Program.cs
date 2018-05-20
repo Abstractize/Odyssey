@@ -32,7 +32,7 @@ namespace Reproductor_de_Musica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form3 loginScreen = new Form3();
+            Form3 loginScreen = new Form3(client);
             Application.Run(loginScreen);
 
 

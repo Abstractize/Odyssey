@@ -14,21 +14,30 @@ namespace Reproductor_de_Musica
     {
         private String username;
         private String password;
+        private Client toServer;
         
         public String getUsername()
         {
             return this.username;
         }
-        public Form3()
+        public Form3(Client client)
         {
             InitializeComponent();
             textBox2.PasswordChar = '*';
+            toServer = client;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+            if (toServer.verifyUsername(username, password))
+            {
+                this.Close();
+            }
+            else
+            {
+                Error error = new Error("User not found or Wrong Password");
+                error.ShowDialog();
+            }
             
         }
 
